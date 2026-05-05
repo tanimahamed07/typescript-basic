@@ -9,6 +9,10 @@ const product: CartItem = {
   quantity: 6,
 };
 
-const calculateTotal = ({ Cart: CartItem }) => {};
+const calculateTotal = ({ price, quantity = 1 }: CartItem) => {
+  return price * quantity
+};
 
-console.log(calculateTotal(product));
+calculateTotal(product);
+
+
